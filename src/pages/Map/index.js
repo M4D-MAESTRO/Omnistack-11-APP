@@ -9,7 +9,6 @@ import mapping from './styles';
 
 export default function Map() {
     const [currentRegion, setCurrentRegion] = useState(null);
-    const [ong, setOng] = useState([]);
     const route = useRoute();
 
     const latitude = route.params.latitude;
@@ -41,12 +40,11 @@ export default function Map() {
             style={mapping.map} >
 
             < Marker
-                key={ong._id}
+                
                 coordinate={{
                     longitude,
                     latitude
                 }}>
-                {/*<Image style={mapping.avatar} source={{ uri: dev.avatar_url }} />*/}
             </Marker>
         </MapView>
     );
